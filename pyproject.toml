@@ -1,0 +1,22 @@
+[project]
+name = "maaqks"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "json-with-comments>=1.2.10",
+    "maafw>=5.4.3",
+]
+
+
+[tool.pyright]
+venv = ".venv"
+venvPath = "."
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.37.1",
+    "maadebugger>=1.16.0",
+    "ruff>=0.14.13",
+]

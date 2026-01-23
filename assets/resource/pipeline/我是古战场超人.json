@@ -1,0 +1,611 @@
+{
+  "$__mpe_config_我是古战场超人": {
+    "$__mpe_code": {
+      "prefix": "",
+      "filePath": "/home/tapas/MaaQKS/assets/我是古战场超人.json",
+      "lastSyncTime": 1769142102782,
+      "savedViewport": {
+        "x": -726,
+        "y": 198,
+        "zoom": 0.73
+      },
+      "filename": "我是古战场超人",
+      "version": "v1.0.0"
+    }
+  },
+  "HasChallengeButton": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769143656396.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 5000,
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 15
+      }
+    },
+    "next": [
+      "ClickChallengeButton"
+    ]
+  },
+  "HasChooseSupportText": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769155464349.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 5000,
+    "$__mpe_code": {
+      "position": {
+        "x": 4060,
+        "y": 936
+      }
+    },
+    "next": [
+      "ClickChooseSupport"
+    ]
+  },
+  "HasBattleSuccessText": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769155874975.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 4000,
+    "$__mpe_code": {
+      "position": {
+        "x": 4640,
+        "y": 541
+      }
+    },
+    "next": [
+      "SkipBattleCalcPage"
+    ]
+  },
+  "HasSkipCombatButton": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769141832822.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 20000,
+    "$__mpe_code": {
+      "position": {
+        "x": 4060,
+        "y": 298
+      }
+    },
+    "next": [
+      "ClickSkipCombatButton"
+    ]
+  },
+  "ClickStartChallengeButton": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          360,
+          1054,
+          0,
+          0
+        ]
+      }
+    },
+    "post_delay": 400,
+    "pre_delay": 200,
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 0
+      }
+    },
+    "next": [
+      "HasEnsureButton",
+      "HasChooseSupportText",
+      "Challenge"
+    ]
+  },
+  "ClickEnsureButtion": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          358,
+          1043,
+          0,
+          0
+        ]
+      }
+    },
+    "pre_delay": 200,
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 1450,
+        "y": 0
+      }
+    },
+    "next": [
+      "HasAddApText",
+      "HasSkipCombatButton",
+      "Challenge"
+    ]
+  },
+  "HasFinishBattleButton": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769144018449.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 5000,
+    "$__mpe_code": {
+      "position": {
+        "x": 4930,
+        "y": 804
+      }
+    },
+    "next": [
+      "ClickNextBattleButton"
+    ]
+  },
+  "HasAddApText": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "补充体力"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 5000,
+    "$__mpe_code": {
+      "position": {
+        "x": 1740,
+        "y": 15
+      }
+    },
+    "next": [
+      "USE_AP"
+    ]
+  },
+  "USE_AP": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769146878628.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 200,
+    "$__mpe_code": {
+      "position": {
+        "x": 2030,
+        "y": 15
+      }
+    },
+    "next": [
+      "SelectMaxAP"
+    ]
+  },
+  "SelectMaxAP": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          534,
+          702,
+          24,
+          27
+        ]
+      }
+    },
+    "post_delay": 500,
+    "$__mpe_code": {
+      "position": {
+        "x": 2320,
+        "y": 15
+      }
+    },
+    "next": [
+      "CostAP"
+    ]
+  },
+  "CostAP": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769147113656.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 200,
+    "$__mpe_code": {
+      "position": {
+        "x": 2610,
+        "y": 15
+      }
+    },
+    "next": [
+      "EnsureFlowAP"
+    ]
+  },
+  "CloseUseAPPage": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "点击空白区域关闭"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 3190,
+        "y": 132
+      }
+    },
+    "next": [
+      "CloseSelectMaxAPPage"
+    ]
+  },
+  "EnsureFlowAP": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769147276639.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 2900,
+        "y": 15
+      }
+    },
+    "next": [
+      "CloseSelectMaxAPPage",
+      "CloseUseAPPage"
+    ]
+  },
+  "CloseSelectMaxAPPage": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769147371991.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 3480,
+        "y": 15
+      }
+    },
+    "next": [
+      "ReturnPrevPage",
+      "Challenge"
+    ]
+  },
+  "ReturnPrevPage": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769147441346.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 3770,
+        "y": 15
+      }
+    }
+  },
+  "ClickChallengeButton": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          595,
+          778,
+          0,
+          0
+        ]
+      }
+    },
+    "pre_delay": 200,
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 290,
+        "y": 0
+      }
+    },
+    "next": [
+      "HasStartChallengeButton",
+      "Challenge"
+    ]
+  },
+  "Challenge": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 3770,
+        "y": 531
+      }
+    },
+    "next": [
+      "HasBattleSuccessText",
+      "HasFinishBattleButton",
+      "HasSkipCombatButton",
+      "HasChallengeButton",
+      "HasStartChallengeButton",
+      "HasEnsureButton",
+      "HasChooseSupportText",
+      "HasAddApText"
+    ]
+  },
+  "HasStartChallengeButton": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769144384378.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 5000,
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 15
+      }
+    },
+    "next": [
+      "ClickStartChallengeButton"
+    ]
+  },
+  "HasEnsureButton": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769144491823.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 4000,
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 15
+      }
+    },
+    "next": [
+      "ClickEnsureButtion"
+    ]
+  },
+  "ClickChooseSupport": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          419,
+          494,
+          0,
+          0
+        ]
+      }
+    },
+    "pre_delay": 200,
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 4350,
+        "y": 921
+      }
+    },
+    "next": [
+      "HasEnsureButton",
+      "Challenge"
+    ]
+  },
+  "ClickSkipCombatButton": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          360,
+          1109,
+          0,
+          0
+        ]
+      }
+    },
+    "post_delay": 400,
+    "pre_delay": 200,
+    "$__mpe_code": {
+      "position": {
+        "x": 4350,
+        "y": 658
+      }
+    },
+    "next": [
+      "HasBattleSuccessText",
+      "Challenge"
+    ]
+  },
+  "SkipBattleCalcPage": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          445,
+          1177,
+          0,
+          0
+        ]
+      }
+    },
+    "pre_delay": 200,
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 4930,
+        "y": 526
+      }
+    },
+    "next": [
+      "ClickNextBattleButton"
+    ]
+  },
+  "ClickNextBattleButton": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          162,
+          1210,
+          0,
+          0
+        ]
+      }
+    },
+    "pre_delay": 200,
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 5220,
+        "y": 526
+      }
+    }
+  }
+}
