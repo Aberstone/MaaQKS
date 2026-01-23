@@ -25,7 +25,7 @@
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "官服-EMU-1280*720",
             "path": [
                 "./resource"
             ]
@@ -33,7 +33,7 @@
     ],
     "task": [
         {
-            "name": "AUTO_QKS",
+            "name": "我要当古战场高手",
             "entry": "Challenge"
         }
     ]
