@@ -1,19 +1,17 @@
 {
   "$__mpe_config_我是古战场超人": {
     "$__mpe_code": {
-      "prefix": "",
-      "filePath": "/home/tapas/MaaQKS/assets/我是古战场超人.json",
-      "lastSyncTime": 1769142102782,
+      "prefix": "QKS",
       "savedViewport": {
-        "x": -1698,
-        "y": 130,
-        "zoom": 0.73
+        "x": -1210,
+        "y": -32,
+        "zoom": 0.87
       },
       "filename": "我是古战场超人",
       "version": "v1.0.0"
     }
   },
-  "HasChallengeButton": {
+  "QKS_HasChallengeButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -27,17 +25,20 @@
       "param": {}
     },
     "timeout": 5000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到挑战入口"
+    },
     "$__mpe_code": {
       "position": {
         "x": 0,
-        "y": 455
+        "y": 600
       }
     },
     "next": [
-      "ClickChallengeButton"
+      "QKS_ClickChallengeButton"
     ]
   },
-  "HasChooseSupportText": {
+  "QKS_HasChooseSupportText": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -51,6 +52,9 @@
       "param": {}
     },
     "timeout": 5000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到选择助战"
+    },
     "$__mpe_code": {
       "position": {
         "x": 4350,
@@ -58,10 +62,10 @@
       }
     },
     "next": [
-      "ClickChooseSupport"
+      "QKS_ClickChooseSupport"
     ]
   },
-  "HasBattleSuccessText": {
+  "QKS_HasBattleSuccessText": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -75,17 +79,20 @@
       "param": {}
     },
     "timeout": 4000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到战斗胜利"
+    },
     "$__mpe_code": {
       "position": {
         "x": 4930,
-        "y": 879
+        "y": 1088
       }
     },
     "next": [
-      "SkipBattleCalcPage"
+      "QKS_SkipBattleCalcPage"
     ]
   },
-  "HasSkipCombatButton": {
+  "QKS_HasSkipCombatButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -99,17 +106,21 @@
       "param": {}
     },
     "timeout": 20000,
+    "focus": {
+      "Node.Recognition.Starting": "{task_id} {reco_id} 尝试识别跳过战斗",
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别跳过战斗成功"
+    },
     "$__mpe_code": {
       "position": {
         "x": 4350,
-        "y": 1011
+        "y": 1220
       }
     },
     "next": [
-      "ClickSkipCombatButton"
+      "QKS_ClickSkipCombatButton"
     ]
   },
-  "ClickStartChallengeButton": {
+  "QKS_ClickStartChallengeButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -127,6 +138,9 @@
     },
     "post_delay": 400,
     "pre_delay": 200,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击开始战斗"
+    },
     "$__mpe_code": {
       "position": {
         "x": 870,
@@ -134,12 +148,12 @@
       }
     },
     "next": [
-      "HasEnsureButton",
-      "HasChooseSupportText",
-      "Challenge"
+      "QKS_HasEnsureButton",
+      "QKS_HasChooseSupportText",
+      "QKS_Challenge"
     ]
   },
-  "ClickEnsureButtion": {
+  "QKS_ClickEnsureButtion": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -157,19 +171,22 @@
     },
     "pre_delay": 200,
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击确定"
+    },
     "$__mpe_code": {
       "position": {
         "x": 1450,
-        "y": 804
+        "y": 998
       }
     },
     "next": [
-      "HasAddApText",
-      "HasSkipCombatButton",
-      "Challenge"
+      "QKS_HasAddApText",
+      "QKS_HasSkipCombatButton",
+      "QKS_Challenge"
     ]
   },
-  "HasFinishBattleButton": {
+  "QKS_HasFinishBattleButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -183,17 +200,20 @@
       "param": {}
     },
     "timeout": 5000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到战斗结束"
+    },
     "$__mpe_code": {
       "position": {
         "x": 5220,
-        "y": 651
+        "y": 788
       }
     },
     "next": [
-      "ClickNextBattleButton"
+      "QKS_ClickNextBattleButton"
     ]
   },
-  "HasAddApText": {
+  "QKS_HasAddApText": {
     "recognition": {
       "type": "OCR",
       "param": {
@@ -207,17 +227,20 @@
       "param": {}
     },
     "timeout": 5000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到体力不足"
+    },
     "$__mpe_code": {
       "position": {
         "x": 1740,
-        "y": 819
+        "y": 1013
       }
     },
     "next": [
-      "USE_AP"
+      "QKS_USE_AP"
     ]
   },
-  "USE_AP": {
+  "QKS_USE_AP": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -231,17 +254,20 @@
       "param": {}
     },
     "post_delay": 200,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击使用体力药"
+    },
     "$__mpe_code": {
       "position": {
         "x": 2030,
-        "y": 303
+        "y": 335
       }
     },
     "next": [
-      "SelectMaxAP"
+      "QKS_SelectMaxAP"
     ]
   },
-  "SelectMaxAP": {
+  "QKS_SelectMaxAP": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -258,17 +284,20 @@
       }
     },
     "post_delay": 500,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击最大体力"
+    },
     "$__mpe_code": {
       "position": {
         "x": 2320,
-        "y": 303
+        "y": 335
       }
     },
     "next": [
-      "CostAP"
+      "QKS_CostAP"
     ]
   },
-  "CostAP": {
+  "QKS_CostAP": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -282,17 +311,20 @@
       "param": {}
     },
     "post_delay": 200,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击确认消耗"
+    },
     "$__mpe_code": {
       "position": {
         "x": 2610,
-        "y": 303
+        "y": 335
       }
     },
     "next": [
-      "EnsureFlowAP"
+      "QKS_EnsureFlowAP"
     ]
   },
-  "CloseUseAPPage": {
+  "QKS_CloseUseAPPage": {
     "recognition": {
       "type": "OCR",
       "param": {
@@ -313,17 +345,20 @@
       }
     },
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击空白关闭页面"
+    },
     "$__mpe_code": {
       "position": {
         "x": 3190,
-        "y": 288
+        "y": 320
       }
     },
     "next": [
-      "CloseSelectMaxAPPage"
+      "QKS_CloseSelectMaxAPPage"
     ]
   },
-  "EnsureFlowAP": {
+  "QKS_EnsureFlowAP": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -337,18 +372,21 @@
       "param": {}
     },
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 确认溢出提醒"
+    },
     "$__mpe_code": {
       "position": {
         "x": 2900,
-        "y": 303
+        "y": 335
       }
     },
     "next": [
-      "CloseSelectMaxAPPage",
-      "CloseUseAPPage"
+      "QKS_CloseSelectMaxAPPage",
+      "QKS_CloseUseAPPage"
     ]
   },
-  "CloseSelectMaxAPPage": {
+  "QKS_CloseSelectMaxAPPage": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -362,18 +400,21 @@
       "param": {}
     },
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 关闭体力选择"
+    },
     "$__mpe_code": {
       "position": {
         "x": 3480,
-        "y": 303
+        "y": 335
       }
     },
     "next": [
-      "ReturnPrevPage",
-      "Challenge"
+      "QKS_ReturnPrevPage",
+      "QKS_Challenge"
     ]
   },
-  "ReturnPrevPage": {
+  "QKS_ReturnPrevPage": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -387,17 +428,20 @@
       "param": {}
     },
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 返回上一页"
+    },
     "$__mpe_code": {
       "position": {
         "x": 3770,
-        "y": 571
+        "y": 468
       }
     },
     "next": [
-      "Challenge"
+      "QKS_Challenge"
     ]
   },
-  "ClickChallengeButton": {
+  "QKS_ClickChallengeButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -415,18 +459,21 @@
     },
     "pre_delay": 200,
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击挑战入口"
+    },
     "$__mpe_code": {
       "position": {
         "x": 290,
-        "y": 440
+        "y": 585
       }
     },
     "next": [
-      "HasStartChallengeButton",
-      "Challenge"
+      "QKS_HasStartChallengeButton",
+      "QKS_Challenge"
     ]
   },
-  "Challenge": {
+  "QKS_Challenge": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -438,21 +485,22 @@
     "$__mpe_code": {
       "position": {
         "x": 4060,
-        "y": 601
+        "y": 645
       }
     },
     "next": [
-      "HasSkipCombatButton",
-      "HasChallengeButton",
-      "HasStartChallengeButton",
-      "HasEnsureButton",
-      "HasChooseSupportText",
-      "HasBattleSuccessText",
-      "HasFinishBattleButton",
-      "HasAddApText"
+      "QKS_HasSkipCombatButton",
+      "QKS_HasUnknownEnsureButton",
+      "QKS_HasBattleSuccessText",
+      "QKS_HasFinishBattleButton",
+      "QKS_HasChallengeButton",
+      "QKS_HasStartChallengeButton",
+      "QKS_HasEnsureButton",
+      "QKS_HasChooseSupportText",
+      "QKS_HasAddApText"
     ]
   },
-  "HasStartChallengeButton": {
+  "QKS_HasStartChallengeButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -466,17 +514,20 @@
       "param": {}
     },
     "timeout": 5000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到开始挑战按钮"
+    },
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 571
+        "y": 733
       }
     },
     "next": [
-      "ClickStartChallengeButton"
+      "QKS_ClickStartChallengeButton"
     ]
   },
-  "HasEnsureButton": {
+  "QKS_HasEnsureButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -490,17 +541,20 @@
       "param": {}
     },
     "timeout": 4000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到确定按钮"
+    },
     "$__mpe_code": {
       "position": {
         "x": 1160,
-        "y": 819
+        "y": 1013
       }
     },
     "next": [
-      "ClickEnsureButtion"
+      "QKS_ClickEnsureButtion"
     ]
   },
-  "ClickChooseSupport": {
+  "QKS_ClickChooseSupport": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -518,18 +572,21 @@
     },
     "pre_delay": 200,
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击助战"
+    },
     "$__mpe_code": {
       "position": {
         "x": 4640,
-        "y": 117
+        "y": 133
       }
     },
     "next": [
-      "HasEnsureButton",
-      "Challenge"
+      "QKS_HasEnsureButton",
+      "QKS_Challenge"
     ]
   },
-  "ClickSkipCombatButton": {
+  "QKS_ClickSkipCombatButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -545,20 +602,21 @@
         ]
       }
     },
-    "post_delay": 400,
-    "pre_delay": 200,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击跳过战斗"
+    },
     "$__mpe_code": {
       "position": {
         "x": 4640,
-        "y": 996
+        "y": 1235
       }
     },
     "next": [
-      "HasBattleSuccessText",
-      "Challenge"
+      "QKS_HasBattleSuccessText",
+      "QKS_Challenge"
     ]
   },
-  "SkipBattleCalcPage": {
+  "QKS_SkipBattleCalcPage": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -574,19 +632,21 @@
         ]
       }
     },
-    "pre_delay": 200,
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 跳过结算页面"
+    },
     "$__mpe_code": {
       "position": {
         "x": 5220,
-        "y": 864
+        "y": 1088
       }
     },
     "next": [
-      "ClickNextBattleButton"
+      "QKS_ClickNextBattleButton"
     ]
   },
-  "ClickNextBattleButton": {
+  "QKS_ClickNextBattleButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -604,14 +664,70 @@
     },
     "pre_delay": 200,
     "post_delay": 400,
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击再一次挑战"
+    },
     "$__mpe_code": {
       "position": {
         "x": 5510,
-        "y": 864
+        "y": 1073
       }
     },
     "next": [
-      "Challenge"
+      "QKS_Challenge"
+    ]
+  },
+  "QKS_HasUnknownEnsureButton": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确定"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "timeout": 5000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到未知确定按钮"
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 4350,
+        "y": 935
+      }
+    },
+    "next": [
+      "QKS_ClickUnknownEnsureButton"
+    ]
+  },
+  "QKS_ClickUnknownEnsureButton": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": "QKS_HasUnknownEnsureButton"
+      }
+    },
+    "focus": {
+      "Node.Action.Succeeded": "{task_id} {action_id} 点击未知确认按钮"
+    },
+    "pre_delay": 200,
+    "post_delay": 400,
+    "$__mpe_code": {
+      "position": {
+        "x": 4640,
+        "y": 920
+      }
+    },
+    "next": [
+      "QKS_Challenge"
     ]
   }
 }
