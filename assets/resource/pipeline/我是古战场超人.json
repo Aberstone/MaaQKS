@@ -5,8 +5,8 @@
       "filePath": "/home/tapas/MaaQKS/assets/我是古战场超人.json",
       "lastSyncTime": 1769142102782,
       "savedViewport": {
-        "x": -726,
-        "y": 198,
+        "x": -1698,
+        "y": 130,
         "zoom": 0.73
       },
       "filename": "我是古战场超人",
@@ -30,7 +30,7 @@
     "$__mpe_code": {
       "position": {
         "x": 0,
-        "y": 15
+        "y": 455
       }
     },
     "next": [
@@ -53,8 +53,8 @@
     "timeout": 5000,
     "$__mpe_code": {
       "position": {
-        "x": 4060,
-        "y": 936
+        "x": 4350,
+        "y": 15
       }
     },
     "next": [
@@ -77,8 +77,8 @@
     "timeout": 4000,
     "$__mpe_code": {
       "position": {
-        "x": 4640,
-        "y": 541
+        "x": 4930,
+        "y": 879
       }
     },
     "next": [
@@ -101,8 +101,8 @@
     "timeout": 20000,
     "$__mpe_code": {
       "position": {
-        "x": 4060,
-        "y": 298
+        "x": 4350,
+        "y": 1011
       }
     },
     "next": [
@@ -160,7 +160,7 @@
     "$__mpe_code": {
       "position": {
         "x": 1450,
-        "y": 0
+        "y": 804
       }
     },
     "next": [
@@ -185,8 +185,8 @@
     "timeout": 5000,
     "$__mpe_code": {
       "position": {
-        "x": 4930,
-        "y": 804
+        "x": 5220,
+        "y": 651
       }
     },
     "next": [
@@ -210,7 +210,7 @@
     "$__mpe_code": {
       "position": {
         "x": 1740,
-        "y": 15
+        "y": 819
       }
     },
     "next": [
@@ -234,7 +234,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2030,
-        "y": 15
+        "y": 303
       }
     },
     "next": [
@@ -261,7 +261,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2320,
-        "y": 15
+        "y": 303
       }
     },
     "next": [
@@ -285,7 +285,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2610,
-        "y": 15
+        "y": 303
       }
     },
     "next": [
@@ -316,7 +316,7 @@
     "$__mpe_code": {
       "position": {
         "x": 3190,
-        "y": 132
+        "y": 288
       }
     },
     "next": [
@@ -340,7 +340,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2900,
-        "y": 15
+        "y": 303
       }
     },
     "next": [
@@ -365,7 +365,7 @@
     "$__mpe_code": {
       "position": {
         "x": 3480,
-        "y": 15
+        "y": 303
       }
     },
     "next": [
@@ -390,9 +390,12 @@
     "$__mpe_code": {
       "position": {
         "x": 3770,
-        "y": 15
+        "y": 571
       }
-    }
+    },
+    "next": [
+      "Challenge"
+    ]
   },
   "ClickChallengeButton": {
     "recognition": {
@@ -415,7 +418,7 @@
     "$__mpe_code": {
       "position": {
         "x": 290,
-        "y": 0
+        "y": 440
       }
     },
     "next": [
@@ -434,18 +437,18 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 3770,
-        "y": 531
+        "x": 4060,
+        "y": 601
       }
     },
     "next": [
-      "HasBattleSuccessText",
-      "HasFinishBattleButton",
       "HasSkipCombatButton",
       "HasChallengeButton",
       "HasStartChallengeButton",
       "HasEnsureButton",
       "HasChooseSupportText",
+      "HasBattleSuccessText",
+      "HasFinishBattleButton",
       "HasAddApText"
     ]
   },
@@ -466,7 +469,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 15
+        "y": 571
       }
     },
     "next": [
@@ -490,7 +493,7 @@
     "$__mpe_code": {
       "position": {
         "x": 1160,
-        "y": 15
+        "y": 819
       }
     },
     "next": [
@@ -517,8 +520,8 @@
     "post_delay": 400,
     "$__mpe_code": {
       "position": {
-        "x": 4350,
-        "y": 921
+        "x": 4640,
+        "y": 117
       }
     },
     "next": [
@@ -546,8 +549,8 @@
     "pre_delay": 200,
     "$__mpe_code": {
       "position": {
-        "x": 4350,
-        "y": 658
+        "x": 4640,
+        "y": 996
       }
     },
     "next": [
@@ -575,8 +578,8 @@
     "post_delay": 400,
     "$__mpe_code": {
       "position": {
-        "x": 4930,
-        "y": 526
+        "x": 5220,
+        "y": 864
       }
     },
     "next": [
@@ -603,9 +606,12 @@
     "post_delay": 400,
     "$__mpe_code": {
       "position": {
-        "x": 5220,
-        "y": 526
+        "x": 5510,
+        "y": 864
       }
-    }
+    },
+    "next": [
+      "Challenge"
+    ]
   }
 }
