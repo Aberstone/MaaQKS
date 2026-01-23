@@ -1,19 +1,17 @@
 {
   "$__mpe_config_我是古战场超人": {
     "$__mpe_code": {
-      "prefix": "",
-      "filePath": "/home/tapas/MaaQKS/assets/我是古战场超人.json",
-      "lastSyncTime": 1769142102782,
+      "prefix": "QKS",
       "savedViewport": {
-        "x": -669,
-        "y": 42,
-        "zoom": 0.71
+        "x": -1210,
+        "y": -32,
+        "zoom": 0.87
       },
       "filename": "我是古战场超人",
       "version": "v1.0.0"
     }
   },
-  "HasChallengeButton": {
+  "QKS_HasChallengeButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -32,15 +30,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 870,
-        "y": 586
+        "x": 0,
+        "y": 600
       }
     },
     "next": [
-      "ClickChallengeButton"
+      "QKS_ClickChallengeButton"
     ]
   },
-  "HasChooseSupportText": {
+  "QKS_HasChooseSupportText": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -59,15 +57,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 2030,
-        "y": 924
+        "x": 4350,
+        "y": 15
       }
     },
     "next": [
-      "ClickChooseSupport"
+      "QKS_ClickChooseSupport"
     ]
   },
-  "HasBattleSuccessText": {
+  "QKS_HasBattleSuccessText": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -86,15 +84,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 3770,
-        "y": 273
+        "x": 4930,
+        "y": 1088
       }
     },
     "next": [
-      "SkipBattleCalcPage"
+      "QKS_SkipBattleCalcPage"
     ]
   },
-  "HasSkipCombatButton": {
+  "QKS_HasSkipCombatButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -114,15 +112,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 3190,
-        "y": 420
+        "x": 4350,
+        "y": 1220
       }
     },
     "next": [
-      "ClickSkipCombatButton"
+      "QKS_ClickSkipCombatButton"
     ]
   },
-  "ClickStartChallengeButton": {
+  "QKS_ClickStartChallengeButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -145,17 +143,17 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 1740,
-        "y": 571
+        "x": 870,
+        "y": 0
       }
     },
     "next": [
-      "HasEnsureButton",
-      "HasChooseSupportText",
-      "Challenge"
+      "QKS_HasEnsureButton",
+      "QKS_HasChooseSupportText",
+      "QKS_Challenge"
     ]
   },
-  "ClickEnsureButtion": {
+  "QKS_ClickEnsureButtion": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -178,17 +176,17 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 2900,
-        "y": 763
+        "x": 1450,
+        "y": 998
       }
     },
     "next": [
-      "HasAddApText",
-      "HasSkipCombatButton",
-      "Challenge"
+      "QKS_HasAddApText",
+      "QKS_HasSkipCombatButton",
+      "QKS_Challenge"
     ]
   },
-  "HasFinishBattleButton": {
+  "QKS_HasFinishBattleButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -207,15 +205,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 4060,
-        "y": 15
+        "x": 5220,
+        "y": 788
       }
     },
     "next": [
-      "ClickNextBattleButton"
+      "QKS_ClickNextBattleButton"
     ]
   },
-  "HasAddApText": {
+  "QKS_HasAddApText": {
     "recognition": {
       "type": "OCR",
       "param": {
@@ -234,15 +232,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 3190,
-        "y": 1247
+        "x": 1740,
+        "y": 1013
       }
     },
     "next": [
-      "USE_AP"
+      "QKS_USE_AP"
     ]
   },
-  "USE_AP": {
+  "QKS_USE_AP": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -261,15 +259,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 3480,
-        "y": 1247
+        "x": 2030,
+        "y": 335
       }
     },
     "next": [
-      "SelectMaxAP"
+      "QKS_SelectMaxAP"
     ]
   },
-  "SelectMaxAP": {
+  "QKS_SelectMaxAP": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -291,15 +289,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 3770,
-        "y": 1247
+        "x": 2320,
+        "y": 335
       }
     },
     "next": [
-      "CostAP"
+      "QKS_CostAP"
     ]
   },
-  "CostAP": {
+  "QKS_CostAP": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -318,15 +316,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 4060,
-        "y": 1247
+        "x": 2610,
+        "y": 335
       }
     },
     "next": [
-      "EnsureFlowAP"
+      "QKS_EnsureFlowAP"
     ]
   },
-  "CloseUseAPPage": {
+  "QKS_CloseUseAPPage": {
     "recognition": {
       "type": "OCR",
       "param": {
@@ -352,15 +350,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 4640,
-        "y": 1232
+        "x": 3190,
+        "y": 320
       }
     },
     "next": [
-      "CloseSelectMaxAPPage"
+      "QKS_CloseSelectMaxAPPage"
     ]
   },
-  "EnsureFlowAP": {
+  "QKS_EnsureFlowAP": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -379,16 +377,16 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 4350,
-        "y": 1247
+        "x": 2900,
+        "y": 335
       }
     },
     "next": [
-      "CloseSelectMaxAPPage",
-      "CloseUseAPPage"
+      "QKS_CloseSelectMaxAPPage",
+      "QKS_CloseUseAPPage"
     ]
   },
-  "CloseSelectMaxAPPage": {
+  "QKS_CloseSelectMaxAPPage": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -407,16 +405,16 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 4930,
-        "y": 1394
+        "x": 3480,
+        "y": 335
       }
     },
     "next": [
-      "ReturnPrevPage",
-      "Challenge"
+      "QKS_ReturnPrevPage",
+      "QKS_Challenge"
     ]
   },
-  "ReturnPrevPage": {
+  "QKS_ReturnPrevPage": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -435,15 +433,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 5220,
-        "y": 1394
+        "x": 3770,
+        "y": 468
       }
     },
     "next": [
-      "Challenge"
+      "QKS_Challenge"
     ]
   },
-  "ClickChallengeButton": {
+  "QKS_ClickChallengeButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -466,16 +464,16 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 1160,
-        "y": 571
+        "x": 290,
+        "y": 585
       }
     },
     "next": [
-      "HasStartChallengeButton",
-      "Challenge"
+      "QKS_HasStartChallengeButton",
+      "QKS_Challenge"
     ]
   },
-  "Challenge": {
+  "QKS_Challenge": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -486,23 +484,23 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 580,
-        "y": 60
+        "x": 4060,
+        "y": 645
       }
     },
     "next": [
-      "HasSkipCombatButton",
-      "HasChallengeButton",
-      "HasStartChallengeButton",
-      "HasEnsureButton",
-      "HasChooseSupportText",
-      "HasUnknownEnsureButton",
-      "HasBattleSuccessText",
-      "HasFinishBattleButton",
-      "HasAddApText"
+      "QKS_HasSkipCombatButton",
+      "QKS_HasUnknownEnsureButton",
+      "QKS_HasBattleSuccessText",
+      "QKS_HasFinishBattleButton",
+      "QKS_HasChallengeButton",
+      "QKS_HasStartChallengeButton",
+      "QKS_HasEnsureButton",
+      "QKS_HasChooseSupportText",
+      "QKS_HasAddApText"
     ]
   },
-  "HasStartChallengeButton": {
+  "QKS_HasStartChallengeButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -521,15 +519,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 1450,
-        "y": 586
+        "x": 580,
+        "y": 733
       }
     },
     "next": [
-      "ClickStartChallengeButton"
+      "QKS_ClickStartChallengeButton"
     ]
   },
-  "HasEnsureButton": {
+  "QKS_HasEnsureButton": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -548,15 +546,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 2610,
-        "y": 778
+        "x": 1160,
+        "y": 1013
       }
     },
     "next": [
-      "ClickEnsureButtion"
+      "QKS_ClickEnsureButtion"
     ]
   },
-  "ClickChooseSupport": {
+  "QKS_ClickChooseSupport": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -579,16 +577,16 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 2320,
-        "y": 909
+        "x": 4640,
+        "y": 133
       }
     },
     "next": [
-      "HasEnsureButton",
-      "Challenge"
+      "QKS_HasEnsureButton",
+      "QKS_Challenge"
     ]
   },
-  "ClickSkipCombatButton": {
+  "QKS_ClickSkipCombatButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -604,23 +602,21 @@
         ]
       }
     },
-    "post_delay": 400,
-    "pre_delay": 200,
     "focus": {
       "Node.Action.Succeeded": "{task_id} {action_id} 点击跳过战斗"
     },
     "$__mpe_code": {
       "position": {
-        "x": 3480,
-        "y": 405
+        "x": 4640,
+        "y": 1235
       }
     },
     "next": [
-      "HasBattleSuccessText",
-      "Challenge"
+      "QKS_HasBattleSuccessText",
+      "QKS_Challenge"
     ]
   },
-  "SkipBattleCalcPage": {
+  "QKS_SkipBattleCalcPage": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -636,22 +632,21 @@
         ]
       }
     },
-    "pre_delay": 200,
     "post_delay": 400,
     "focus": {
       "Node.Action.Succeeded": "{task_id} {action_id} 跳过结算页面"
     },
     "$__mpe_code": {
       "position": {
-        "x": 4060,
-        "y": 258
+        "x": 5220,
+        "y": 1088
       }
     },
     "next": [
-      "ClickNextBattleButton"
+      "QKS_ClickNextBattleButton"
     ]
   },
-  "ClickNextBattleButton": {
+  "QKS_ClickNextBattleButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -674,15 +669,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 4350,
-        "y": 258
+        "x": 5510,
+        "y": 1073
       }
     },
     "next": [
-      "Challenge"
+      "QKS_Challenge"
     ]
   },
-  "HasUnknownEnsureButton": {
+  "QKS_HasUnknownEnsureButton": {
     "recognition": {
       "type": "OCR",
       "param": {
@@ -701,15 +696,15 @@
     },
     "$__mpe_code": {
       "position": {
-        "x": 0,
-        "y": 15
+        "x": 4350,
+        "y": 935
       }
     },
     "next": [
-      "ClickUnknownEnsureButton"
+      "QKS_ClickUnknownEnsureButton"
     ]
   },
-  "ClickUnknownEnsureButton": {
+  "QKS_ClickUnknownEnsureButton": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -717,7 +712,7 @@
     "action": {
       "type": "Click",
       "param": {
-        "target": "HasUnknownEnsureButton"
+        "target": "QKS_HasUnknownEnsureButton"
       }
     },
     "focus": {
@@ -727,12 +722,12 @@
     "post_delay": 400,
     "$__mpe_code": {
       "position": {
-        "x": 290,
-        "y": 0
+        "x": 4640,
+        "y": 920
       }
     },
     "next": [
-      "Challenge"
+      "QKS_Challenge"
     ]
   }
 }

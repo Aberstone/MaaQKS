@@ -36,13 +36,14 @@ def main():
     tasker = Tasker()
     tasker.bind(resource,controller)
 
-    while True:
-        start_time = time.time()
-        task_detail = tasker.post_task("Challenge").wait().get()
-        print(f"Task detail: {task_detail}")
-        time.sleep(3)
-        end_time = time.time()
-        print(f"Time taken: {end_time - start_time} seconds")
+    # while True:
+    #     start_time = time.time()
+    #     task_detail = tasker.post_task("Challenge").wait().get()
+    #     print(f"Task detail: {task_detail}")
+    #     time.sleep(3)
+    #     end_time = time.time()
+    #     print(f"Time taken: {end_time - start_time} seconds")
+    task_detail = tasker.post_task("Material_MoreMaterial").wait().get()
 
 if __name__ == "__main__":
     main()

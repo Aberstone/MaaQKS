@@ -34,7 +34,13 @@
     "task": [
         {
             "name": "我要当古战场高手",
-            "entry": "Challenge"
+            "entry": "QKS_Challenge",
+            "description": "测试刷章鱼没啥问题，打完一管体力会尝试打一把章鱼妹"
+        },
+        {
+            "name": "我要住在素材本",
+            "entry": "Material_MoreMaterial",
+            "description": "刷素材本，我喜欢刷风，所以默认刷风素材"
         }
     ]
 }
