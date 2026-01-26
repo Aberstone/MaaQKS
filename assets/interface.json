@@ -41,6 +41,10 @@
             "name": "我要住在素材本",
             "entry": "Material_MoreMaterial",
             "description": "刷素材本，我喜欢刷风，所以默认刷风素材"
+        },
+        {
+            "name": "我要住在使徒家",
+            "entry": "Atreides_MoreOldenBattleFieldPoint"
         }
     ]
 }

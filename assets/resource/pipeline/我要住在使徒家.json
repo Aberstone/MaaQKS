@@ -1,0 +1,509 @@
+{
+  "$__mpe_config_我要住在使徒家": {
+    "$__mpe_code": {
+      "filePath": "/home/tapas/MaaQKS/assets/resource/pipeline/我要住在使徒家.json",
+      "filename": "我要住在使徒家",
+      "lastSyncTime": 1769424793822,
+      "prefix": "Atreides",
+      "savedViewport": {
+        "x": 632,
+        "y": -276,
+        "zoom": 0.91
+      },
+      "version": "v1.0.1"
+    }
+  },
+  "Atreides_AtChooseSupportPage": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 486
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "当前处于助战选择页面，选择目标中"
+    },
+    "next": [
+      "[JumpBack]Atreides_RecoSupportTextRev",
+      "Atreides_RecoSupportText"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          252,
+          188,
+          251,
+          112
+        ],
+        "template": [
+          "old_battle_field/template_1769411204200.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Atreides_ChooseSupport": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 759
+      }
+    },
+    "action": {
+      "param": {
+        "target": "Atreides_RecoSupportText"
+      },
+      "type": "Click"
+    }
+  },
+  "Atreides_ClickBattleFinishedEnsureButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 30
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          359,
+          1211,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    }
+  },
+  "Atreides_ClickChallengeButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 957
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          592,
+          779,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    }
+  },
+  "Atreides_ClickCreateRoomButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 1200
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          507,
+          1055,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    }
+  },
+  "Atreides_ClickEnsureStartBattle": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 258
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          511,
+          858,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "post_delay": 20000
+  },
+  "Atreides_ClickEnsureTeamButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 1443
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          352,
+          1047,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    }
+  },
+  "Atreides_ClickSkipButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 1731
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          361,
+          1110,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    }
+  },
+  "Atreides_ClickStartBattleButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 273
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          544,
+          1223,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Atreides_ClickEnsureStartBattle"
+    ]
+  },
+  "Atreides_HadBattleFinished": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 0
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到战斗结束"
+    },
+    "next": [
+      "Atreides_SkipBattleFinishedPage"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          572,
+          448,
+          129,
+          127
+        ],
+        "template": [
+          "old_battle_field/template_1769416251321.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Atreides_HasChallengeButtonOnPage": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 927
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到挑战按钮"
+    },
+    "next": [
+      "Atreides_ClickChallengeButton"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          469,
+          661,
+          226,
+          232
+        ],
+        "template": [
+          "old_battle_field/template_1769410496561.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Atreides_HasCreateRoomButtonOnPage": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 1170
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到创建房间按钮"
+    },
+    "next": [
+      "Atreides_ClickCreateRoomButton"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          392,
+          969,
+          240,
+          126
+        ],
+        "template": [
+          "old_battle_field/template_1769410757139.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Atreides_HasEnsureTeamButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 1413
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到队伍确认按钮"
+    },
+    "next": [
+      "Atreides_ClickEnsureTeamButton"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          214,
+          986,
+          295,
+          122
+        ],
+        "template": [
+          "old_battle_field/template_1769412548741.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Atreides_HasSkipButtonOnPage": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 1656
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到跳过战斗"
+    },
+    "next": [
+      "Atreides_ClickSkipButton"
+    ],
+    "post_delay": 0,
+    "rate_limit": 200,
+    "recognition": {
+      "param": {
+        "roi": [
+          211,
+          1070,
+          298,
+          81
+        ],
+        "template": [
+          "old_battle_field/template_1769414969469.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 600000
+  },
+  "Atreides_HasStartBattleButtonOnPage": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 243
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到开战按钮"
+    },
+    "next": [
+      "Atreides_ClickStartBattleButton"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          425,
+          1157,
+          241,
+          119
+        ],
+        "template": [
+          "old_battle_field/template_1769414708221.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Atreides_MainRouter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 290,
+        "y": 45
+      }
+    },
+    "next": [
+      "[JumpBack]Atreides_HasSkipButtonOnPage",
+      "[JumpBack]Atreides_HadBattleFinished",
+      "[JumpBack]Atreides_HasChallengeButtonOnPage",
+      "[JumpBack]Atreides_HasStartBattleButtonOnPage",
+      "[JumpBack]Atreides_HasEnsureTeamButton",
+      "[JumpBack]Atreides_AtChooseSupportPage",
+      "[JumpBack]Atreides_HasCreateRoomButtonOnPage"
+    ]
+  },
+  "Atreides_MoreOldenBattleFieldPoint": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 30
+      }
+    },
+    "focus": {
+      "Node.Action.Succeeded": "开始猛刷使徒"
+    },
+    "next": [
+      "Atreides_MainRouter"
+    ]
+  },
+  "Atreides_RecoSupportText": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 744
+      }
+    },
+    "next": [
+      "Atreides_ChooseSupport"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "斯文托维特"
+        ],
+        "roi": [
+          357,
+          378,
+          314,
+          633
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Atreides_RecoSupportTextRev": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 471
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "未检测到目标助战,滑动列表"
+    },
+    "inverse": true,
+    "next": [
+      "Atreides_SwipeSupportList"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "斯文托维特"
+        ],
+        "roi": [
+          357,
+          378,
+          314,
+          633
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Atreides_SkipBattleFinishedPage": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 0
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          470,
+          1100,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Atreides_ClickBattleFinishedEnsureButton"
+    ],
+    "repeat": 2,
+    "repeat_delay": 200
+  },
+  "Atreides_SwipeSupportList": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 471
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          362,
+          976,
+          0,
+          0
+        ],
+        "duration": [
+          1000
+        ],
+        "end": [
+          [
+            374,
+            492,
+            0,
+            0
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "focus": {
+      "Node.Recognition.Failed": "没有合适的助战选择"
+    }
+  }
+}
