@@ -65,8 +65,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [win, macos, linux, android]
-        arch: [aarch64, x86_64]
+        os: [win, linux]
+        arch: [x86_64]
       fail-fast: false
 
     steps:
@@ -78,7 +78,7 @@ jobs:
         uses: robinraju/release-downloader@v1
         with:
           repository: MaaXYZ/MaaFramework
-          fileName: "MAA-${{ matrix.os }}-${{ matrix.arch }}*"
+          fileName: "MaaQKS-${{ matrix.os }}-${{ matrix.arch }}*"
           latest: true
           out-file-path: "deps"
           extract: true
@@ -131,7 +131,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaXXX-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaQKS-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   changelog:

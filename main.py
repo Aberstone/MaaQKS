@@ -43,7 +43,9 @@ def main():
     #     time.sleep(3)
     #     end_time = time.time()
     #     print(f"Time taken: {end_time - start_time} seconds")
-    task_detail = tasker.post_task("Atreides_MoreOldenBattleFieldPoint").wait().get()
+    # task_detail = tasker.post_task("Atreides_MoreOldenBattleFieldPoint").wait().get()
+    task_detail = tasker.post_task("QKS_MoreGachaTicket").wait().get()
+
 
 if __name__ == "__main__":
     main()
