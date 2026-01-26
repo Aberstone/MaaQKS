@@ -9,7 +9,7 @@ def main():
     user_path = Path(".")
     Toolkit.init_option(user_path)
 
-    Tasker.set_stdout_level(LoggingLevelEnum.Warn)
+    Tasker.set_stdout_level(LoggingLevelEnum.All)
 
     resource = Resource()
     resource_detail = resource.post_bundle(user_path / "assets" / "resource").wait()
@@ -43,7 +43,7 @@ def main():
     #     time.sleep(3)
     #     end_time = time.time()
     #     print(f"Time taken: {end_time - start_time} seconds")
-    task_detail = tasker.post_task("Material_MoreMaterial").wait().get()
+    task_detail = tasker.post_task("Atreides_MoreOldenBattleFieldPoint").wait().get()
 
 if __name__ == "__main__":
     main()
