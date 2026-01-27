@@ -1,26 +1,22 @@
 {
   "$__mpe_config_我要住在素材本": {
     "$__mpe_code": {
-      "filePath": "D:\\workstation\\MaaQKS\\assets\\resource\\pipeline\\我要住在素材本.json",
-      "filename": "我要住在素材本",
-      "lastSyncTime": 1769444417296,
       "prefix": "Material",
       "savedViewport": {
-        "x": 349,
-        "y": -10,
-        "zoom": 0.66
+        "x": -243,
+        "y": -348,
+        "zoom": 1.06
       },
+      "filename": "我要住在素材本",
       "version": "v1.0.1"
     }
   },
   "Material_ChooseFirstSupport": {
-    "$__mpe_code": {
-      "position": {
-        "x": 870,
-        "y": 750
-      }
+    "focus": {
+      "Node.Action.Succeeded": "选择第一个助战"
     },
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           385,
@@ -28,21 +24,19 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "focus": {
-      "Node.Action.Succeeded": "选择第一个助战"
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 750
+      }
     }
   },
   "Material_ClickCloseUseAPPageButton": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2030,
-        "y": 1633
-      }
-    },
+    "post_delay": 400,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           197,
@@ -50,22 +44,24 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 2030,
+        "y": 1633
+      }
     },
     "next": [
       "Material_ClickReturnUpPage"
-    ],
-    "post_delay": 400
+    ]
   },
   "Material_ClickContinueChallenge": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2610,
-        "y": 1418
-      }
+    "focus": {
+      "Node.Action.Succeeded": "点击继续挑战"
     },
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           238,
@@ -73,21 +69,21 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "focus": {
-      "Node.Action.Succeeded": "点击继续挑战"
+    "$__mpe_code": {
+      "position": {
+        "x": 2610,
+        "y": 1418
+      }
     }
   },
   "Material_ClickEmpty": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2320,
-        "y": 1418
-      }
+    "focus": {
+      "Node.Action.Succeeded": "点击空白继续"
     },
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           527,
@@ -95,24 +91,22 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "focus": {
-      "Node.Action.Succeeded": "点击空白继续"
+    "$__mpe_code": {
+      "position": {
+        "x": 2320,
+        "y": 1418
+      }
     },
     "next": [
       "Material_ClickContinueChallenge"
     ]
   },
   "Material_ClickEnsureUseAPButton": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1450,
-        "y": 1633
-      }
-    },
+    "post_delay": 400,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           524,
@@ -120,22 +114,22 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "next": [
-      "Material_ClickEnusreOutflowAPButton"
-    ],
-    "post_delay": 400
-  },
-  "Material_ClickEnusreOutflowAPButton": {
     "$__mpe_code": {
       "position": {
-        "x": 1740,
+        "x": 1450,
         "y": 1633
       }
     },
+    "next": [
+      "Material_ClickEnusreOutflowAPButton"
+    ]
+  },
+  "Material_ClickEnusreOutflowAPButton": {
+    "post_delay": 400,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           496,
@@ -143,22 +137,25 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1740,
+        "y": 1633
+      }
     },
     "next": [
       "Material_ClickCloseUseAPPageButton"
-    ],
-    "post_delay": 400
+    ]
   },
   "Material_ClickGameplayButton": {
-    "$__mpe_code": {
-      "position": {
-        "x": 870,
-        "y": 15
-      }
+    "focus": {
+      "Node.Action.Succeeded": "点击玩法按钮"
     },
+    "pre_delay": 0,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           421,
@@ -166,22 +163,19 @@
           0,
           0
         ]
-      },
-      "type": "Click"
-    },
-    "focus": {
-      "Node.Action.Succeeded": "点击玩法按钮"
-    },
-    "pre_delay": 0
-  },
-  "Material_ClickReturnUpPage": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2320,
-        "y": 1633
       }
     },
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 15
+      }
+    }
+  },
+  "Material_ClickReturnUpPage": {
+    "post_delay": 400,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           82,
@@ -189,22 +183,25 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 2320,
+        "y": 1633
+      }
     },
     "next": [
       "Material_ClickContinueChallenge"
-    ],
-    "post_delay": 400
+    ]
   },
   "Material_ClickSkipCombat": {
-    "$__mpe_code": {
-      "position": {
-        "x": 870,
-        "y": 1255
-      }
+    "focus": {
+      "Node.Action.Succeeded": "点击跳过战斗"
     },
+    "pre_delay": 0,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           358,
@@ -212,22 +209,21 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "focus": {
-      "Node.Action.Succeeded": "点击跳过战斗"
-    },
-    "pre_delay": 0
-  },
-  "Material_ClickStartChallengeButton": {
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 535
+        "y": 1255
       }
+    }
+  },
+  "Material_ClickStartChallengeButton": {
+    "focus": {
+      "Node.Action.Succeeded": "开始挑战"
     },
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           354,
@@ -235,21 +231,19 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "focus": {
-      "Node.Action.Succeeded": "开始挑战"
-    }
-  },
-  "Material_ClickStartCombatButton": {
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 995
+        "y": 535
       }
-    },
+    }
+  },
+  "Material_ClickStartCombatButton": {
+    "pre_delay": 0,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           356,
@@ -257,37 +251,37 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "pre_delay": 0
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 995
+      }
+    }
   },
   "Material_ClickTargetMaterialRoom": {
+    "focus": {
+      "Node.Action.Succeeded": "点击素材本入口"
+    },
+    "pre_delay": 0,
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": "Material_FindTargetMaterialRoom"
+      }
+    },
     "$__mpe_code": {
       "position": {
         "x": 1160,
         "y": 275
       }
-    },
-    "action": {
-      "param": {
-        "target": "Material_FindTargetMaterialRoom"
-      },
-      "type": "Click"
-    },
-    "focus": {
-      "Node.Action.Succeeded": "点击素材本入口"
-    },
-    "pre_delay": 0
+    }
   },
   "Material_ClickUseAPButton": {
-    "$__mpe_code": {
-      "position": {
-        "x": 870,
-        "y": 1633
-      }
-    },
+    "post_delay": 400,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           553,
@@ -295,29 +289,25 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
     },
-    "next": [
-      "Material_SelectMaxNumAP"
-    ],
-    "post_delay": 400
-  },
-  "Material_FindTargetMaterialRoom": {
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 260
+        "y": 1633
       }
     },
+    "next": [
+      "Material_SelectMaxNumAP"
+    ]
+  },
+  "Material_FindTargetMaterialRoom": {
     "focus": {
       "Node.Recognition.Succeeded": "找到素材本位置"
     },
-    "next": [
-      "Material_ClickTargetMaterialRoom"
-    ],
     "post_delay": 0,
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "roi": [
           13,
@@ -328,91 +318,91 @@
         "template": [
           "template_1769185072579.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 260
+      }
+    },
+    "next": [
+      "Material_ClickTargetMaterialRoom"
+    ]
   },
   "Material_HasAddAPText": {
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到补充体力页面"
+    },
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "标准体力补给"
+        ]
+      }
+    },
     "$__mpe_code": {
       "position": {
         "x": 580,
         "y": 1633
       }
     },
-    "focus": {
-      "Node.Recognition.Succeeded": "识别到补充体力页面"
-    },
     "next": [
       "Material_ClickUseAPButton"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "标准体力补给"
-        ]
-      },
-      "type": "OCR"
-    }
+    ]
   },
   "Material_HasBattleSuccessIcon": {
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到战斗已结束"
+    },
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769187261962.png"
+        ]
+      }
+    },
     "$__mpe_code": {
       "position": {
         "x": 2030,
         "y": 1418
       }
     },
-    "focus": {
-      "Node.Recognition.Succeeded": "识别到战斗已结束"
-    },
     "next": [
       "Material_ClickEmpty"
-    ],
-    "recognition": {
-      "param": {
-        "template": [
-          "template_1769187261962.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
+    ]
   },
   "Material_HasChooseSupportText": {
+    "focus": {
+      "Node.Recognition.Succeeded": "进入助战选择界面"
+    },
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769185728420.png"
+        ]
+      }
+    },
     "$__mpe_code": {
       "position": {
         "x": 580,
         "y": 750
       }
     },
-    "focus": {
-      "Node.Recognition.Succeeded": "进入助战选择界面"
-    },
     "next": [
       "Material_ChooseFirstSupport"
-    ],
-    "recognition": {
-      "param": {
-        "template": [
-          "template_1769185728420.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
+    ]
   },
   "Material_HasGameplayButton": {
-    "$__mpe_code": {
-      "position": {
-        "x": 580,
-        "y": 0
-      }
-    },
     "focus": {
       "Node.Recognition.Succeeded": "识别到玩法按钮"
     },
-    "next": [
-      "Material_ClickGameplayButton"
-    ],
     "post_delay": 0,
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "roi": [
           357,
@@ -423,24 +413,24 @@
         "template": [
           "template_1769184646367.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "Material_HasGameplayRowIcon": {
+      }
+    },
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 275
+        "y": 0
       }
     },
+    "next": [
+      "Material_ClickGameplayButton"
+    ]
+  },
+  "Material_HasGameplayRowIcon": {
     "focus": {
       "Node.Recognition.Succeeded": "识别到在玩法页面"
     },
-    "next": [
-      "Material_FindTargetMaterialRoom"
-    ],
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "roi": [
           12,
@@ -451,25 +441,25 @@
         "template": [
           "template_1769184843883.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "Material_HasSkipCombatButton": {
+      }
+    },
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 1240
+        "y": 275
       }
     },
+    "next": [
+      "Material_FindTargetMaterialRoom"
+    ]
+  },
+  "Material_HasSkipCombatButton": {
     "focus": {
       "Node.Recognition.Succeeded": "识别到跳过战斗"
     },
-    "next": [
-      "Material_ClickSkipCombat"
-    ],
     "post_delay": 0,
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "roi": [
           195,
@@ -480,47 +470,47 @@
         "template": [
           "more_material/template_1769141832822.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 1240
+      }
+    },
+    "next": [
+      "Material_ClickSkipCombat"
+    ]
   },
   "Material_HasStartChallengeButton": {
+    "focus": {
+      "Node.Recognition.Succeeded": "定位到开始挑战按钮"
+    },
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "template_1769185239180.png"
+        ]
+      }
+    },
     "$__mpe_code": {
       "position": {
         "x": 580,
         "y": 535
       }
     },
-    "focus": {
-      "Node.Recognition.Succeeded": "定位到开始挑战按钮"
-    },
     "next": [
       "Material_ClickStartChallengeButton"
-    ],
-    "recognition": {
-      "param": {
-        "template": [
-          "template_1769185239180.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
+    ]
   },
   "Material_HasStartCombatButton": {
-    "$__mpe_code": {
-      "position": {
-        "x": 580,
-        "y": 965
-      }
-    },
     "focus": {
       "Node.Recognition.Succeeded": "识别到开始战斗按钮"
     },
-    "next": [
-      "Material_ClickStartCombatButton"
-    ],
     "post_delay": 0,
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "roi": [
           209,
@@ -531,9 +521,17 @@
         "template": [
           "template_1769185892984.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 965
+      }
+    },
+    "next": [
+      "Material_ClickStartCombatButton"
+    ]
   },
   "Material_MainRouter": {
     "$__mpe_code": {
@@ -554,27 +552,23 @@
     ]
   },
   "Material_MoreMaterial": {
+    "focus": {
+      "Node.Action.Succeeded": "开始猛猛刷素材"
+    },
     "$__mpe_code": {
       "position": {
         "x": 0,
         "y": 45
       }
     },
-    "focus": {
-      "Node.Action.Succeeded": "开始猛猛刷素材"
-    },
     "next": [
       "Material_MainRouter"
     ]
   },
   "Material_SelectMaxNumAP": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1160,
-        "y": 1633
-      }
-    },
+    "post_delay": 400,
     "action": {
+      "type": "Click",
       "param": {
         "target": [
           545,
@@ -582,12 +576,16 @@
           0,
           0
         ]
-      },
-      "type": "Click"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 1633
+      }
     },
     "next": [
       "Material_ClickEnsureUseAPButton"
-    ],
-    "post_delay": 400
+    ]
   }
 }

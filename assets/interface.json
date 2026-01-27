@@ -21,11 +21,27 @@
             "name": "安卓端",
             "type": "Adb",
             "display_short_side": 720 // 默认缩放分辨率的短边长度
+        },
+        {
+            "name": "TapTapPC端",
+            "type": "Win32",
+            "display_short_side": 720,
+            "win32": {
+                "window_regex": "风之痕迹",
+                "mouse": "PostMessageWithCursorPos",
+                "screencap": "FramePool"
+            }
         }
     ],
     "resource": [
         {
             "name": "官服-EMU-1280*720",
+            "path": [
+                "./resource"
+            ]
+        },
+        {
+            "name": "TapTapPC端",
             "path": [
                 "./resource"
             ]
@@ -44,7 +60,323 @@
         },
         {
             "name": "我要住在使徒家",
-            "entry": "Atreides_MoreOldenBattleFieldPoint"
+            "entry": "Atreides_MoreOldenBattleFieldPoint",
+            "option": [
+                "使徒助战魔物选择"
+            ]
+        },
+        {
+            "name": "纯纯跳过工具人",
+            "entry": "SkipBot_SkipBot",
+            "description": "检测不到跳过按钮超过一定时长后会退出任务，默认值为20000ms",
+            "option": [
+                "timeout"
+            ]
         }
-    ]
+    ],
+    "option": {
+        "timeout": {
+            "type": "input",
+            "label": "$timeout",
+            "description": "检测不到跳过按钮超过一定时长后会退出任务，默认值为20000ms",
+            "inputs": [
+                {
+                    "name": "timeout_ms",
+                    "label": "$timeout_ms",
+                    "description": "检测不到跳过按钮超过一定时长后会退出任务，默认值为20000ms",
+                    "default": "20000",
+                    "pipeline_type": "int",
+                    "verify": "^\\d+$"
+                }
+            ],
+            "pipeline_override": {
+                "SkipBot_MainRouter": {
+                    "timeout": "{timeout_ms}"
+                }
+            }
+        },
+        "使徒助战魔物选择": {
+            "type": "select",
+            "description": "选择助战的名字，默认是风老王",
+            "default_case": "风老王",
+            "cases": [
+                {
+                    "name": "风老王",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "斯文托维特"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "斯文托维特"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "火老王",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "迪亚波罗"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "迪亚波罗"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "水老王",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "欧若拉"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "欧若拉"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "土老王",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "阿格莱亚"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "阿格莱亚"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "火属贵",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "梵尽花"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "梵尽花"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "风属贵",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "和音"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "和音"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "水属贵",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "欲望泉"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "欲望泉"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "土属贵",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "断裁偶"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "断裁偶"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "火乌龟",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "苏尔特尔"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "Atreides_RecoSupportTextRev": {
+                        "recognition": {
+                            "param": {
+                                "expected": [
+                                    "苏尔特尔"
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "风鸟",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "赫拉斯瓦尔格"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "赫拉斯瓦尔格"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "土骆驼",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "伊南娜"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "伊南娜"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "水鲸鱼",
+                    "pipeline_override": {
+                        "Atreides_RecoSupportText": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "卡律布狄斯"
+                                    ]
+                                }
+                            }
+                        },
+                        "Atreides_RecoSupportTextRev": {
+                            "recognition": {
+                                "param": {
+                                    "expected": [
+                                        "卡律布狄斯"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                }
+            ]
+        }
+    }
 }
