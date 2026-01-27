@@ -1,5 +1,4 @@
 from pathlib import Path
-import time
 from maa.controller import AdbController
 from maa.toolkit import Toolkit
 from maa.tasker import Tasker, LoggingLevelEnum

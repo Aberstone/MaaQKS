@@ -13,6 +13,7 @@ dependencies = [
 [tool.pyright]
 venv = ".venv"
 venvPath = "."
+typeCheckingMode = "basic"
 
 [dependency-groups]
 dev = [
