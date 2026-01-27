@@ -3,12 +3,331 @@
     "$__mpe_code": {
       "prefix": "QKS",
       "savedViewport": {
-        "x": 339,
-        "y": -243,
-        "zoom": 1.06
+        "x": 829,
+        "y": 200,
+        "zoom": 0.62
       },
       "filename": "我是古战场超人",
       "version": "v1.0.1"
+    }
+  },
+  "QKS_AddApRouter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 45
+      }
+    },
+    "next": [
+      "QKS_RightTopApIsMaxAndHasReturnButton",
+      "QKS_HasUseApButton"
+    ]
+  },
+  "QKS_HasUseApButton": {
+    "focus": {
+      "Node.Recognition.Succeeded": "查找到使用AP按钮"
+    },
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "add_ap_or_bp/template_1769520799896.png"
+        ],
+        "roi": [
+          439,
+          551,
+          229,
+          501
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 237
+      }
+    },
+    "next": [
+      "QKS_ClickUseApButton"
+    ]
+  },
+  "QKS_ClickUseApButton": {
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": "QKS_HasUseApButton"
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1450,
+        "y": 267
+      }
+    }
+  },
+  "QKS_AtUseApPage": {
+    "focus": {
+      "Node.Recognition.Succeeded": "处于使用药水页面"
+    },
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "add_ap_or_bp/template_1769521073367.png"
+        ],
+        "roi": [
+          225,
+          109,
+          278,
+          121
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 450
+      }
+    },
+    "next": [
+      "[JumpBack]QKS_AtApOutflowWarningPage",
+      "[JumpBack]QKS_ApIsNotMax",
+      "QKS_ApIsMax"
+    ]
+  },
+  "QKS_ApIsNotMax": {
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到体力未满"
+    },
+    "inverse": true,
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "999"
+        ],
+        "roi": [
+          288,
+          597,
+          84,
+          64
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 435
+      }
+    },
+    "next": [
+      "QKS_ClickMaxApPoint"
+    ]
+  },
+  "QKS_ClickMaxApPoint": {
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          543,
+          713,
+          0,
+          0
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 480
+      }
+    },
+    "next": [
+      "QKS_ClickUse"
+    ]
+  },
+  "QKS_ClickUse": {
+    "repeat": 4,
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          521,
+          821,
+          0,
+          0
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1450,
+        "y": 465
+      }
+    }
+  },
+  "QKS_AtApOutflowWarningPage": {
+    "focus": "体力溢出告警",
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "add_ap_or_bp/template_1769521699528.png"
+        ],
+        "roi": [
+          255,
+          316,
+          205,
+          119
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 708
+      }
+    },
+    "next": [
+      "QKS_ClickEnsureWarningButton"
+    ]
+  },
+  "QKS_ClickEnsureWarningButton": {
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          501,
+          782,
+          0,
+          0
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 738
+      }
+    }
+  },
+  "QKS_ApIsMax": {
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到体力已满"
+    },
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "999"
+        ],
+        "roi": [
+          288,
+          597,
+          84,
+          64
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 951
+      }
+    },
+    "next": [
+      "QKS_ClickCloseUseApPageButton"
+    ]
+  },
+  "QKS_ClickCloseUseApPageButton": {
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          198,
+          821,
+          0,
+          0
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 981
+      }
+    }
+  },
+  "QKS_RightTopApIsMaxAndHasReturnButton": {
+    "focus": {
+      "Node.Recognition.Succeeded": "体力已满，返回上一页"
+    },
+    "recognition": {
+      "type": "And",
+      "param": {
+        "all_of": [
+          {
+            "recognition": {
+              "type": "OCR",
+              "param": {
+                "expected": [
+                  "999"
+                ],
+                "roi": [
+                  593,
+                  7,
+                  113,
+                  54
+                ]
+              }
+            }
+          },
+          {
+            "recognition": {
+              "type": "TemplateMatch",
+              "param": {
+                "template": [
+                  "add_ap_or_bp/template_1769522136055.png"
+                ],
+                "roi": [
+                  11,
+                  1139,
+                  197,
+                  131
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 7
+      }
+    },
+    "next": [
+      "QKS_ClickAddApReturnButton"
+    ]
+  },
+  "QKS_ClickAddApReturnButton": {
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          84,
+          1210,
+          0,
+          0
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 1450,
+        "y": 30
+      }
     }
   },
   "QKS_AtChooseSupportText": {
@@ -32,7 +351,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 819
+        "y": 1164
       }
     },
     "next": [
@@ -54,7 +373,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 849
+        "y": 1194
       }
     }
   },
@@ -73,7 +392,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 606
+        "y": 2013
       }
     }
   },
@@ -92,7 +411,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 1092
+        "y": 2499
       }
     }
   },
@@ -111,7 +430,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 1350
+        "y": 2757
       }
     }
   },
@@ -131,7 +450,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 45
+        "y": 1452
       }
     },
     "next": [
@@ -153,7 +472,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 2094
+        "y": 2256
       }
     }
   },
@@ -167,147 +486,36 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 1851
+        "y": 3015
       }
     }
   },
-  "QKS_CloseSelectMaxAPPage": {
-    "focus": {
-      "Node.Action.Succeeded": "{task_id} {action_id} 关闭体力选择"
-    },
-    "post_delay": 400,
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": [
-          "template_1769147371991.png"
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2320,
-        "y": 1578
-      }
-    },
-    "next": [
-      "QKS_ReturnPrevPage"
-    ]
-  },
-  "QKS_CloseUseAPPage": {
-    "focus": {
-      "Node.Action.Succeeded": "{task_id} {action_id} 点击空白关闭页面"
-    },
-    "post_delay": 400,
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": [
-          "点击空白区域关闭"
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          0,
-          0,
-          0,
-          0
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2030,
-        "y": 1563
-      }
-    },
-    "next": [
-      "QKS_CloseSelectMaxAPPage"
-    ]
-  },
-  "QKS_CostAP": {
-    "focus": {
-      "Node.Action.Succeeded": "{task_id} {action_id} 点击确认消耗"
-    },
-    "post_delay": 200,
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": [
-          "template_1769147113656.png"
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1450,
-        "y": 1578
-      }
-    },
-    "next": [
-      "QKS_EnsureFlowAP"
-    ]
-  },
-  "QKS_EnsureFlowAP": {
-    "focus": {
-      "Node.Action.Succeeded": "{task_id} {action_id} 确认溢出提醒"
-    },
-    "post_delay": 400,
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": [
-          "template_1769147276639.png"
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1740,
-        "y": 1578
-      }
-    },
-    "next": [
-      "QKS_CloseSelectMaxAPPage",
-      "QKS_CloseUseAPPage"
-    ]
-  },
   "QKS_HasAddApText": {
     "focus": {
-      "Node.Recognition.Succeeded": "{task_id} {reco_id} 识别到体力不足"
+      "Node.Recognition.Succeeded": "识别到体力不足"
     },
-    "timeout": 5000,
     "recognition": {
-      "type": "OCR",
+      "type": "TemplateMatch",
       "param": {
-        "expected": [
-          "补充体力"
+        "template": [
+          "add_ap_or_bp/template_1769520657646.png"
+        ],
+        "roi": [
+          238,
+          107,
+          237,
+          139
         ]
       }
     },
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 1578
+        "y": 0
       }
     },
     "next": [
-      "QKS_USE_AP"
+      "QKS_AddApRouter"
     ]
   },
   "QKS_HasBattleSuccessText": {
@@ -332,7 +540,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 303
+        "y": 1710
       }
     },
     "next": [
@@ -360,7 +568,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 576
+        "y": 1983
       }
     },
     "next": [
@@ -388,7 +596,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 2064
+        "y": 2226
       }
     },
     "next": [
@@ -416,7 +624,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 1062
+        "y": 2469
       }
     },
     "next": [
@@ -445,7 +653,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 1305
+        "y": 2712
       }
     },
     "next": [
@@ -475,7 +683,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 0
+        "y": 1407
       }
     },
     "next": [
@@ -498,7 +706,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 1821
+        "y": 2985
       }
     },
     "next": [
@@ -511,7 +719,7 @@
     "$__mpe_code": {
       "position": {
         "x": 290,
-        "y": 45
+        "y": 15
       }
     },
     "next": [
@@ -523,7 +731,8 @@
       "[JumpBack]QKS_HasEnsureTeamButton",
       "[JumpBack]QKS_HasChallengeRaidButtonOnPage",
       "[JumpBack]QKS_HasBattleSuccessText",
-      "[JumpBack]QKS_HasAddApText"
+      "[JumpBack]QKS_HasAddApText",
+      "[JumpBack]QKS_AtUseApPage"
     ]
   },
   "QKS_MoreGachaTicket": {
@@ -535,61 +744,11 @@
     "$__mpe_code": {
       "position": {
         "x": 0,
-        "y": 30
+        "y": 0
       }
     },
     "next": [
       "QKS_MainRouter"
-    ]
-  },
-  "QKS_ReturnPrevPage": {
-    "focus": {
-      "Node.Action.Succeeded": "{task_id} {action_id} 返回上一页"
-    },
-    "post_delay": 400,
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": [
-          "template_1769147441346.png"
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 2610,
-        "y": 1578
-      }
-    }
-  },
-  "QKS_SelectMaxAP": {
-    "focus": {
-      "Node.Action.Succeeded": "{task_id} {action_id} 点击最大体力"
-    },
-    "post_delay": 500,
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          534,
-          702,
-          24,
-          27
-        ]
-      }
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 1160,
-        "y": 1578
-      }
-    },
-    "next": [
-      "QKS_CostAP"
     ]
   },
   "QKS_SkipBattleCalcPage": {
@@ -609,7 +768,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 318
+        "y": 1725
       }
     }
   },
@@ -631,35 +790,8 @@
     "$__mpe_code": {
       "position": {
         "x": 1160,
-        "y": 15
+        "y": 1422
       }
     }
-  },
-  "QKS_USE_AP": {
-    "focus": {
-      "Node.Action.Succeeded": "{task_id} {action_id} 点击使用体力药"
-    },
-    "post_delay": 200,
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": [
-          "template_1769146878628.png"
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "$__mpe_code": {
-      "position": {
-        "x": 870,
-        "y": 1578
-      }
-    },
-    "next": [
-      "QKS_SelectMaxAP"
-    ]
   }
 }
