@@ -1,0 +1,89 @@
+{
+    "$__mpe_config_纯纯跳过工具人": {
+        "$__mpe_code": {
+            "prefix": "SkipBot",
+            "savedViewport": {
+                "x": 513,
+                "y": 451,
+                "zoom": 1.37
+            },
+            "filename": "纯纯跳过工具人",
+            "version": "v1.0.1"
+        }
+    },
+    "SkipBot_SkipBot": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 60
+            }
+        },
+        "next": [
+            "SkipBot_MainRouter"
+        ]
+    },
+    "SkipBot_MainRouter": {
+        "$__mpe_code": {
+            "position": {
+                "x": 290,
+                "y": 60
+            }
+        },
+        "next": [
+            "[JumpBack]SkipBot_HasSkipCombatButton"
+        ]
+    },
+    "SkipBot_HasSkipCombatButton": {
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到跳过按钮"
+        },
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "more_material/template_1769141832822.png"
+                ],
+                "roi": [
+                    195,
+                    1056,
+                    328,
+                    113
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 0
+            }
+        },
+        "next": [
+            "SkipBot_ClickSkipCombatButton"
+        ]
+    },
+    "SkipBot_ClickSkipCombatButton": {
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    358,
+                    1110,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 30
+            }
+        }
+    }
+}
