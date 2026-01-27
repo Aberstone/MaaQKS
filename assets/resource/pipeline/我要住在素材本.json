@@ -1,664 +1,593 @@
 {
-    "$__mpe_config_我要住在素材本": {
-        "$__mpe_code": {
-            "prefix": "Material",
-            "savedViewport": {
-                "x": 527,
-                "y": -7,
-                "zoom": 0.66
-            },
-            "filename": "我要住在素材本",
-            "version": "v1.0.0"
-        }
-    },
-    "Material_MoreMaterial": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Action.Succeeded": "开始猛猛刷素材"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 0,
-                "y": 30
-            }
-        },
-        "next": [
-            "Material_MainRouter"
-        ]
-    },
-    "Material_HasGameplayButton": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769184646367.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "识别到玩法按钮"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 580,
-                "y": 133
-            }
-        },
-        "next": [
-            "Material_ClickGameplayButton"
-        ]
-    },
-    "Material_MainRouter": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 290,
-                "y": 45
-            }
-        },
-        "next": [
-            "[JumpBack]Material_HasSkipCombatButton",
-            "[JumpBack]Material_HasGameplayButton",
-            "[JumpBack]Material_HasGameplayRowIcon",
-            "[JumpBack]Material_HasStartChallengeButton",
-            "[JumpBack]Material_HasChooseSupportText",
-            "[JumpBack]Material_HasStartCombatButton",
-            "[JumpBack]Material_HasBattleSuccessIcon",
-            "[JumpBack]Material_HasAddAPText"
-        ]
-    },
-    "Material_ClickGameplayButton": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    421,
-                    1207,
-                    0,
-                    0
-                ]
-            }
-        },
-        "focus": {
-            "Node.Action.Succeeded": "点击玩法按钮"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 870,
-                "y": 133
-            }
-        }
-    },
-    "Material_HasGameplayRowIcon": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769184843883.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "识别到在玩法页面"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 580,
-                "y": 348
-            }
-        },
-        "next": [
-            "Material_FindTargetMaterialRoom"
-        ]
-    },
-    "Material_FindTargetMaterialRoom": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769185072579.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "找到素材本位置"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 870,
-                "y": 348
-            }
-        },
-        "next": [
-            "Material_ClickTargetMaterialRoom"
-        ]
-    },
-    "Material_ClickTargetMaterialRoom": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": "Material_FindTargetMaterialRoom"
-            }
-        },
-        "focus": {
-            "Node.Action.Succeeded": "点击素材本入口"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 1160,
-                "y": 348
-            }
-        }
-    },
-    "Material_HasStartChallengeButton": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769185239180.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "定位到开始挑战按钮"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 580,
-                "y": 563
-            }
-        },
-        "next": [
-            "Material_ClickStartChallengeButton"
-        ]
-    },
-    "Material_ClickStartChallengeButton": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    354,
-                    1088,
-                    0,
-                    0
-                ]
-            }
-        },
-        "focus": {
-            "Node.Action.Succeeded": "开始挑战"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 870,
-                "y": 563
-            }
-        }
-    },
-    "Material_HasChooseSupportText": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769185728420.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "进入助战选择界面"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 580,
-                "y": 778
-            }
-        },
-        "next": [
-            "Material_ChooseFirstSupport"
-        ]
-    },
-    "Material_ChooseFirstSupport": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    385,
-                    501,
-                    0,
-                    0
-                ]
-            }
-        },
-        "focus": {
-            "Node.Action.Succeeded": "选择第一个助战"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 870,
-                "y": 778
-            }
-        }
-    },
-    "Material_HasStartCombatButton": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769185892984.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "识别到开始战斗按钮"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 580,
-                "y": 993
-            }
-        },
-        "next": [
-            "Material_ClickStartCombatButton"
-        ]
-    },
-    "Material_ClickStartCombatButton": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    356,
-                    1059,
-                    0,
-                    0
-                ]
-            }
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 870,
-                "y": 993
-            }
-        }
-    },
-    "Material_HasSkipCombatButton": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769141832822.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "识别到跳过战斗"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 580,
-                "y": 1208
-            }
-        },
-        "next": [
-            "Material_ClickSkipCombat"
-        ]
-    },
-    "Material_ClickSkipCombat": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    358,
-                    1110,
-                    0,
-                    0
-                ]
-            }
-        },
-        "focus": {
-            "Node.Action.Succeeded": "点击跳过战斗"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 870,
-                "y": 1208
-            }
-        }
-    },
-    "Material_HasBattleSuccessIcon": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "template_1769187261962.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "识别到战斗已结束"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 2030,
-                "y": 15
-            }
-        },
-        "next": [
-            "Material_ClickEmpty"
-        ]
-    },
-    "Material_ClickEmpty": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    527,
-                    1072,
-                    0,
-                    0
-                ]
-            }
-        },
-        "focus": {
-            "Node.Action.Succeeded": "点击空白继续"
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 2320,
-                "y": 0
-            }
-        },
-        "next": [
-            "Material_ClickContinueChallenge"
-        ]
-    },
-    "Material_ClickContinueChallenge": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    238,
-                    1207,
-                    0,
-                    0
-                ]
-            }
-        },
-        "focus": {
-            "Node.Action.Succeeded": "点击继续挑战"
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 2610,
-                "y": 0
-            }
-        }
-    },
-    "Material_HasAddAPText": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "标准体力补给"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "识别到补充体力页面"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 580,
-                "y": 1423
-            }
-        },
-        "next": [
-            "Material_ClickUseAPButton"
-        ]
-    },
-    "Material_ClickUseAPButton": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    553,
-                    679,
-                    0,
-                    0
-                ]
-            }
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 870,
-                "y": 1423
-            }
-        },
-        "next": [
-            "Material_SelectMaxNumAP"
-        ]
-    },
-    "Material_SelectMaxNumAP": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    545,
-                    715,
-                    0,
-                    0
-                ]
-            }
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 1160,
-                "y": 1423
-            }
-        },
-        "next": [
-            "Material_ClickEnsureUseAPButton"
-        ]
-    },
-    "Material_ClickEnsureUseAPButton": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    524,
-                    820,
-                    0,
-                    0
-                ]
-            }
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 1450,
-                "y": 1423
-            }
-        },
-        "next": [
-            "Material_ClickEnusreOutflowAPButton"
-        ]
-    },
-    "Material_ClickCloseUseAPPageButton": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    197,
-                    819,
-                    0,
-                    0
-                ]
-            }
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 2030,
-                "y": 1423
-            }
-        },
-        "next": [
-            "Material_ClickReturnUpPage"
-        ]
-    },
-    "Material_ClickReturnUpPage": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    82,
-                    1208,
-                    0,
-                    0
-                ]
-            }
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 2320,
-                "y": 1423
-            }
-        },
-        "next": [
-            "Material_ClickContinueChallenge"
-        ]
-    },
-    "Material_ClickEnusreOutflowAPButton": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    496,
-                    782,
-                    0,
-                    0
-                ]
-            }
-        },
-        "post_delay": 400,
-        "$__mpe_code": {
-            "position": {
-                "x": 1740,
-                "y": 1423
-            }
-        },
-        "next": [
-            "Material_ClickCloseUseAPPageButton"
-        ]
+  "$__mpe_config_我要住在素材本": {
+    "$__mpe_code": {
+      "filePath": "D:\\workstation\\MaaQKS\\assets\\resource\\pipeline\\我要住在素材本.json",
+      "filename": "我要住在素材本",
+      "lastSyncTime": 1769444417296,
+      "prefix": "Material",
+      "savedViewport": {
+        "x": 349,
+        "y": -10,
+        "zoom": 0.66
+      },
+      "version": "v1.0.1"
     }
+  },
+  "Material_ChooseFirstSupport": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 750
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          385,
+          501,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Action.Succeeded": "选择第一个助战"
+    }
+  },
+  "Material_ClickCloseUseAPPageButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2030,
+        "y": 1633
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          197,
+          819,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Material_ClickReturnUpPage"
+    ],
+    "post_delay": 400
+  },
+  "Material_ClickContinueChallenge": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2610,
+        "y": 1418
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          238,
+          1207,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Action.Succeeded": "点击继续挑战"
+    }
+  },
+  "Material_ClickEmpty": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2320,
+        "y": 1418
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          527,
+          1072,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Action.Succeeded": "点击空白继续"
+    },
+    "next": [
+      "Material_ClickContinueChallenge"
+    ]
+  },
+  "Material_ClickEnsureUseAPButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1450,
+        "y": 1633
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          524,
+          820,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Material_ClickEnusreOutflowAPButton"
+    ],
+    "post_delay": 400
+  },
+  "Material_ClickEnusreOutflowAPButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1740,
+        "y": 1633
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          496,
+          782,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Material_ClickCloseUseAPPageButton"
+    ],
+    "post_delay": 400
+  },
+  "Material_ClickGameplayButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 15
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          421,
+          1207,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Action.Succeeded": "点击玩法按钮"
+    },
+    "pre_delay": 0
+  },
+  "Material_ClickReturnUpPage": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2320,
+        "y": 1633
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          82,
+          1208,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Material_ClickContinueChallenge"
+    ],
+    "post_delay": 400
+  },
+  "Material_ClickSkipCombat": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 1255
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          358,
+          1110,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Action.Succeeded": "点击跳过战斗"
+    },
+    "pre_delay": 0
+  },
+  "Material_ClickStartChallengeButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 535
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          354,
+          1088,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Action.Succeeded": "开始挑战"
+    }
+  },
+  "Material_ClickStartCombatButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 995
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          356,
+          1059,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "pre_delay": 0
+  },
+  "Material_ClickTargetMaterialRoom": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 275
+      }
+    },
+    "action": {
+      "param": {
+        "target": "Material_FindTargetMaterialRoom"
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Action.Succeeded": "点击素材本入口"
+    },
+    "pre_delay": 0
+  },
+  "Material_ClickUseAPButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 1633
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          553,
+          679,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Material_SelectMaxNumAP"
+    ],
+    "post_delay": 400
+  },
+  "Material_FindTargetMaterialRoom": {
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 260
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "找到素材本位置"
+    },
+    "next": [
+      "Material_ClickTargetMaterialRoom"
+    ],
+    "post_delay": 0,
+    "recognition": {
+      "param": {
+        "roi": [
+          13,
+          995,
+          192,
+          178
+        ],
+        "template": [
+          "template_1769185072579.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_HasAddAPText": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 1633
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到补充体力页面"
+    },
+    "next": [
+      "Material_ClickUseAPButton"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "标准体力补给"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "Material_HasBattleSuccessIcon": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2030,
+        "y": 1418
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到战斗已结束"
+    },
+    "next": [
+      "Material_ClickEmpty"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "template_1769187261962.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_HasChooseSupportText": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 750
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "进入助战选择界面"
+    },
+    "next": [
+      "Material_ChooseFirstSupport"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "template_1769185728420.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_HasGameplayButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 0
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到玩法按钮"
+    },
+    "next": [
+      "Material_ClickGameplayButton"
+    ],
+    "post_delay": 0,
+    "recognition": {
+      "param": {
+        "roi": [
+          357,
+          1129,
+          147,
+          139
+        ],
+        "template": [
+          "template_1769184646367.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_HasGameplayRowIcon": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 275
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到在玩法页面"
+    },
+    "next": [
+      "Material_FindTargetMaterialRoom"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          12,
+          11,
+          388,
+          96
+        ],
+        "template": [
+          "template_1769184843883.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_HasSkipCombatButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 1240
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到跳过战斗"
+    },
+    "next": [
+      "Material_ClickSkipCombat"
+    ],
+    "post_delay": 0,
+    "recognition": {
+      "param": {
+        "roi": [
+          195,
+          1056,
+          328,
+          113
+        ],
+        "template": [
+          "more_material/template_1769141832822.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_HasStartChallengeButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 535
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "定位到开始挑战按钮"
+    },
+    "next": [
+      "Material_ClickStartChallengeButton"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "template_1769185239180.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_HasStartCombatButton": {
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 965
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到开始战斗按钮"
+    },
+    "next": [
+      "Material_ClickStartCombatButton"
+    ],
+    "post_delay": 0,
+    "recognition": {
+      "param": {
+        "roi": [
+          209,
+          976,
+          302,
+          159
+        ],
+        "template": [
+          "template_1769185892984.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "Material_MainRouter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 290,
+        "y": 60
+      }
+    },
+    "next": [
+      "[JumpBack]Material_HasSkipCombatButton",
+      "[JumpBack]Material_HasGameplayButton",
+      "[JumpBack]Material_HasGameplayRowIcon",
+      "[JumpBack]Material_HasStartChallengeButton",
+      "[JumpBack]Material_HasChooseSupportText",
+      "[JumpBack]Material_HasStartCombatButton",
+      "[JumpBack]Material_HasBattleSuccessIcon",
+      "[JumpBack]Material_HasAddAPText"
+    ]
+  },
+  "Material_MoreMaterial": {
+    "$__mpe_code": {
+      "position": {
+        "x": 0,
+        "y": 45
+      }
+    },
+    "focus": {
+      "Node.Action.Succeeded": "开始猛猛刷素材"
+    },
+    "next": [
+      "Material_MainRouter"
+    ]
+  },
+  "Material_SelectMaxNumAP": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1160,
+        "y": 1633
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          545,
+          715,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "Material_ClickEnsureUseAPButton"
+    ],
+    "post_delay": 400
+  }
 }
