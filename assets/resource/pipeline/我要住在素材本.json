@@ -3,9 +3,9 @@
     "$__mpe_code": {
       "prefix": "Material",
       "savedViewport": {
-        "x": -243,
-        "y": -348,
-        "zoom": 1.06
+        "x": 615,
+        "y": 163,
+        "zoom": 0.45
       },
       "filename": "我要住在素材本",
       "version": "v1.0.1"
@@ -29,7 +29,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 750
+        "y": 536
       }
     }
   },
@@ -49,7 +49,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2030,
-        "y": 1633
+        "y": 1781
       }
     },
     "next": [
@@ -74,7 +74,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2610,
-        "y": 1418
+        "y": 147
       }
     }
   },
@@ -96,7 +96,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2320,
-        "y": 1418
+        "y": 147
       }
     },
     "next": [
@@ -119,7 +119,7 @@
     "$__mpe_code": {
       "position": {
         "x": 1450,
-        "y": 1633
+        "y": 1781
       }
     },
     "next": [
@@ -142,7 +142,7 @@
     "$__mpe_code": {
       "position": {
         "x": 1740,
-        "y": 1633
+        "y": 1781
       }
     },
     "next": [
@@ -168,7 +168,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 15
+        "y": 764
       }
     }
   },
@@ -188,7 +188,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2320,
-        "y": 1633
+        "y": 1781
       }
     },
     "next": [
@@ -203,18 +203,13 @@
     "action": {
       "type": "Click",
       "param": {
-        "target": [
-          358,
-          1110,
-          0,
-          0
-        ]
+        "target": "Material_HasSkipCombatButton"
       }
     },
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 1255
+        "y": 1037
       }
     }
   },
@@ -236,7 +231,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 535
+        "y": 1295
       }
     }
   },
@@ -245,18 +240,13 @@
     "action": {
       "type": "Click",
       "param": {
-        "target": [
-          356,
-          1059,
-          0,
-          0
-        ]
+        "target": "Material_HasStartCombatButton"
       }
     },
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 995
+        "y": 1538
       }
     }
   },
@@ -274,7 +264,7 @@
     "$__mpe_code": {
       "position": {
         "x": 1160,
-        "y": 275
+        "y": 278
       }
     }
   },
@@ -294,7 +284,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 1633
+        "y": 1781
       }
     },
     "next": [
@@ -323,7 +313,7 @@
     "$__mpe_code": {
       "position": {
         "x": 870,
-        "y": 260
+        "y": 263
       }
     },
     "next": [
@@ -345,7 +335,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 1633
+        "y": 1781
       }
     },
     "next": [
@@ -367,7 +357,7 @@
     "$__mpe_code": {
       "position": {
         "x": 2030,
-        "y": 1418
+        "y": 147
       }
     },
     "next": [
@@ -389,7 +379,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 750
+        "y": 536
       }
     },
     "next": [
@@ -418,7 +408,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 0
+        "y": 749
       }
     },
     "next": [
@@ -446,7 +436,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 275
+        "y": 278
       }
     },
     "next": [
@@ -475,7 +465,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 1240
+        "y": 1022
       }
     },
     "next": [
@@ -497,7 +487,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 535
+        "y": 1295
       }
     },
     "next": [
@@ -513,10 +503,10 @@
       "type": "TemplateMatch",
       "param": {
         "roi": [
-          209,
-          976,
-          302,
-          159
+          186,
+          934,
+          357,
+          310
         ],
         "template": [
           "template_1769185892984.png"
@@ -526,7 +516,7 @@
     "$__mpe_code": {
       "position": {
         "x": 580,
-        "y": 965
+        "y": 1508
       }
     },
     "next": [
@@ -537,7 +527,7 @@
     "$__mpe_code": {
       "position": {
         "x": 290,
-        "y": 60
+        "y": 45
       }
     },
     "next": [
@@ -548,7 +538,8 @@
       "[JumpBack]Material_HasChooseSupportText",
       "[JumpBack]Material_HasStartCombatButton",
       "[JumpBack]Material_HasBattleSuccessIcon",
-      "[JumpBack]Material_HasAddAPText"
+      "[JumpBack]Material_HasAddAPText",
+      "[JumpBack]Material_HasReChallengeButton"
     ]
   },
   "Material_MoreMaterial": {
@@ -558,7 +549,7 @@
     "$__mpe_code": {
       "position": {
         "x": 0,
-        "y": 45
+        "y": 30
       }
     },
     "next": [
@@ -581,11 +572,58 @@
     "$__mpe_code": {
       "position": {
         "x": 1160,
-        "y": 1633
+        "y": 1781
       }
     },
     "next": [
       "Material_ClickEnsureUseAPButton"
     ]
+  },
+  "Material_HasReChallengeButton": {
+    "focus": {
+      "Node.Recognition.Succeeded": "识别到再次挑战按钮"
+    },
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "more_material/template_1769591055389.png"
+        ],
+        "roi": [
+          115,
+          1096,
+          270,
+          173
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 580,
+        "y": 0
+      }
+    },
+    "next": [
+      "Material_ClickReChallengeButton"
+    ]
+  },
+  "Material_ClickReChallengeButton": {
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          237,
+          1211,
+          0,
+          0
+        ]
+      }
+    },
+    "$__mpe_code": {
+      "position": {
+        "x": 870,
+        "y": 30
+      }
+    }
   }
 }

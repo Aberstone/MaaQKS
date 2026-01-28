@@ -1,0 +1,136 @@
+{
+    "$__mpe_config_大世界-抽卡房间切换": {
+        "$__mpe_code": {
+            "prefix": "WorldSwitch",
+            "savedViewport": {
+                "x": 1009,
+                "y": 491,
+                "zoom": 0.45
+            },
+            "filename": "大世界-抽卡房间切换",
+            "version": "v1.0.1"
+        }
+    },
+    "WorldSwitch_SwitchBetweenWorldAndGachaRoom": {
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 53
+            }
+        },
+        "next": [
+            "WorldSwitch_MainRouter"
+        ]
+    },
+    "WorldSwitch_MainRouter": {
+        "rate_limit": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 290,
+                "y": 60
+            }
+        },
+        "next": [
+            "[JumpBack]WorldSwitch_HasGachaRoomUiButton",
+            "[JumpBack]WorldSwitch_HasReturnWorldUIButton"
+        ]
+    },
+    "WorldSwitch_HasGachaRoomUiButton": {
+        "post_delay": 0,
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到抽卡房间按钮"
+        },
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "game_ui/gacha_room.png"
+                ],
+                "roi": [
+                    6,
+                    1100,
+                    113,
+                    179
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 0
+            }
+        },
+        "next": [
+            "WorldSwitch_ClickGachaRoomUiButton"
+        ]
+    },
+    "WorldSwitch_ClickGachaRoomUiButton": {
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    64,
+                    1213,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 30
+            }
+        }
+    },
+    "WorldSwitch_HasReturnWorldUIButton": {
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到返回世界按钮"
+        },
+        "post_delay": 0,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "game_ui/return_world.png"
+                ],
+                "roi": [
+                    0,
+                    1152,
+                    148,
+                    128
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 273
+            }
+        },
+        "next": [
+            "WorldSwitch_ClickReturnWorldUIButton"
+        ]
+    },
+    "WorldSwitch_ClickReturnWorldUIButton": {
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    70,
+                    1227,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 303
+            }
+        }
+    }
+}
