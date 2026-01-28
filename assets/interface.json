@@ -72,9 +72,35 @@
             "option": [
                 "timeout"
             ]
+        },
+        {
+            "name": "大世界-抽卡房间切换",
+            "entry": "WorldSwitch_SwitchBetweenWorldAndGachaRoom",
+            "option": [
+                "world_switch_screencap_rate"
+            ]
         }
     ],
     "option": {
+        "world_switch_screencap_rate": {
+            "type": "input",
+            "label": "$world_switch_screencap_rate",
+            "inputs": [
+                {
+                    "name": "rate_limit",
+                    "label": "$rate_limit",
+                    "description": "默认值为1000ms, 按照自己机器的情况调整",
+                    "default": "1000",
+                    "pipeline_type": "int",
+                    "verify": "^\\d+$"
+                }
+            ],
+            "pipeline_override": {
+                "WorldSwitch_MainRouter": {
+                    "rate_limit": "{rate_limit}"
+                }
+            }
+        },
         "timeout": {
             "type": "input",
             "label": "$timeout",
