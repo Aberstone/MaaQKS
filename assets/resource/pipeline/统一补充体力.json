@@ -1,0 +1,378 @@
+{
+    "$__mpe_config_统一补充体力": {
+        "$__mpe_code": {
+            "prefix": "AddAP",
+            "savedViewport": {
+                "x": 118,
+                "y": -794,
+                "zoom": 1.5
+            },
+            "filename": "统一补充体力",
+            "version": "v1.0.1"
+        }
+    },
+    "AddAP_GeneralAddAP": {
+        "post_delay": 0,
+        "pre_delay": 0,
+        "focus": {
+            "Node.Recognition.Succeeded": "开始补充体力逻辑"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "next": [
+            "AddAP_HasAddApText",
+            "AddAP_AtUseApPage"
+        ]
+    },
+    "AddAP_AddApRouter": {
+        "$__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 45
+            }
+        },
+        "next": [
+            "AddAP_RightTopApIsMaxAndHasReturnButton",
+            "AddAP_HasUseApButton"
+        ]
+    },
+    "AddAP_HasUseApButton": {
+        "focus": {
+            "Node.Recognition.Succeeded": "查找到使用AP按钮"
+        },
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "add_ap_or_bp/template_1769520799896.png"
+                ],
+                "roi": [
+                    439,
+                    551,
+                    229,
+                    501
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 235
+            }
+        },
+        "next": [
+            "AddAP_ClickUseApButton"
+        ]
+    },
+    "AddAP_ClickUseApButton": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": "AddAP_HasUseApButton"
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1160,
+                "y": 265
+            }
+        }
+    },
+    "AddAP_AtUseApPage": {
+        "focus": {
+            "Node.Recognition.Succeeded": "处于使用药水页面"
+        },
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "add_ap_or_bp/template_1769521073367.png"
+                ],
+                "roi": [
+                    225,
+                    109,
+                    278,
+                    121
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 290,
+                "y": 448
+            }
+        },
+        "next": [
+            "[JumpBack]AddAP_AtApOutflowWarningPage",
+            "[JumpBack]AddAP_ApIsNotMax",
+            "AddAP_ApIsMax"
+        ]
+    },
+    "AddAP_ApIsNotMax": {
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到体力未满"
+        },
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "999"
+                ],
+                "roi": [
+                    288,
+                    597,
+                    84,
+                    64
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 433
+            }
+        },
+        "next": [
+            "AddAP_ClickMaxApPoint"
+        ]
+    },
+    "AddAP_ClickMaxApPoint": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    543,
+                    713,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 478
+            }
+        },
+        "next": [
+            "AddAP_ClickUse"
+        ]
+    },
+    "AddAP_ClickUse": {
+        "repeat": 4,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    521,
+                    821,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1160,
+                "y": 463
+            }
+        }
+    },
+    "AddAP_AtApOutflowWarningPage": {
+        "focus": "体力溢出告警",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "add_ap_or_bp/template_1769521699528.png"
+                ],
+                "roi": [
+                    255,
+                    316,
+                    205,
+                    119
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 706
+            }
+        },
+        "next": [
+            "AddAP_ClickEnsureWarningButton"
+        ]
+    },
+    "AddAP_ClickEnsureWarningButton": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    501,
+                    782,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 736
+            }
+        }
+    },
+    "AddAP_ApIsMax": {
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到体力已满"
+        },
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "999"
+                ],
+                "roi": [
+                    288,
+                    597,
+                    84,
+                    64
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 949
+            }
+        },
+        "next": [
+            "AddAP_ClickCloseUseApPageButton"
+        ]
+    },
+    "AddAP_ClickCloseUseApPageButton": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    198,
+                    821,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 979
+            }
+        }
+    },
+    "AddAP_RightTopApIsMaxAndHasReturnButton": {
+        "focus": {
+            "Node.Recognition.Succeeded": "体力已满，返回上一页"
+        },
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "999"
+                                ],
+                                "roi": [
+                                    593,
+                                    7,
+                                    113,
+                                    54
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "add_ap_or_bp/template_1769522136055.png"
+                                ],
+                                "roi": [
+                                    11,
+                                    1139,
+                                    197,
+                                    131
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 8
+            }
+        },
+        "next": [
+            "AddAP_ClickAddApReturnButton"
+        ]
+    },
+    "AddAP_ClickAddApReturnButton": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    84,
+                    1210,
+                    0,
+                    0
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1160,
+                "y": 30
+            }
+        }
+    },
+    "AddAP_HasAddApText": {
+        "focus": {
+            "Node.Recognition.Succeeded": "识别到体力不足"
+        },
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "add_ap_or_bp/template_1769520657646.png"
+                ],
+                "roi": [
+                    238,
+                    107,
+                    237,
+                    139
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 290,
+                "y": 0
+            }
+        },
+        "next": [
+            "AddAP_AddApRouter"
+        ]
+    }
+}
